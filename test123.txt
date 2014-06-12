@@ -1,0 +1,11 @@
+Jack dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Andy Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Blake Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Cooper Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Duncan Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Elenor Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Finnigan Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Gun Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Hillary Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+Ifinal Dale,John ,10 ,24/05/98 ,jdale11332@gmail.com ,(206)-612-8089 ,dale275@comcast.net ,(206)-524-3566 ,Great Coder
+
