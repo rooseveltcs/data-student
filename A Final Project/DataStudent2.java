@@ -1,22 +1,35 @@
-import java.awt.*;
-import javax.swing.*;
-import java.awt.event.*;
-import java.util.*;
-import java.io.PrintWriter;
-import java.io.File;
-import java.awt.event.*;
-import java.io.*;
-import javax.swing.JMenuBar;
-import javax.swing.JComboBox;
-
+/**
+* DataStudent2.java
+* Assignment: This assignment is for use by teachers who collect their students data at the 
+* beginning of the year. The teachers can save the data in a txt and then can have the data 
+* easily accessible when they want it. 
+* data at the beginning of the year. 
+* Purpose: To practice how to create a simple data base to which one can pull information from.
+* @version 6/7/14
+* @author John Dale
+*/
 
 /*    
-*Writes the first two buttons of the program
-**/
+*Writes the first three buttons of the program and directs the student to the various classes
+*/
+
+import java.awt.*;
+import javax.swing.*;
+import java.util.*;
+import java.awt.event.*;
+import java.io.*;
+
+
+
 public class DataStudent2 extends JFrame implements ActionListener{
+   //creates the button and initializes the buttons
    JButton enterButton = new JButton("Enter Student Information");
    JButton retrieveButton = new JButton("Retrieve Student Information");
+   JButton finalButton = new JButton("Finished with Data Analysis");
    
+/*
+* constucts the field variables further by adding action listener and adds them to Jframe
+*/
    public DataStudent2(){
       JFrame frame = new JFrame();
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -24,15 +37,19 @@ public class DataStudent2 extends JFrame implements ActionListener{
       frame.setTitle("DataStudent");
       frame.setLayout(new FlowLayout());
      
-     //enter student info butto
+      finalButton.addActionListener(this);
       enterButton.addActionListener(this);
       retrieveButton.addActionListener(this);
       frame.add(this.enterButton);
       frame.add(this.retrieveButton);
+      frame.add(this.finalButton);
+   
       frame.setVisible(true);
-      //retrieve student info button
-      //retrieveButton.setBackground(( new Color(31, 190,214))):
    }
+/*
+*checks the source of which button was clicked and saves as src variable
+*Then it runs through if statements for various buttons.
+*/
    public void actionPerformed(ActionEvent evt) {
       Object src = evt.getSource();
       if(src == enterButton){
@@ -54,21 +71,22 @@ public class DataStudent2 extends JFrame implements ActionListener{
          }
          
       }
-      else{
+      else if(src == retrieveButton){
          String text2 = "Type the name of the file you want to retrieve information from (ex. Period1) : ";
          String nameofTxt = JOptionPane.showInputDialog(null,text2);
          String modNameofTxt = (nameofTxt + ".txt").toLowerCase() + "";
-         
+      
          RetrieveButton window = new RetrieveButton(modNameofTxt);  
       }
-      
+      else if(src == finalButton){
+         System.exit(0);
+      }
    }
    
 }
-
+//tests the DataStudent2 class
 class DataStudent{
    public static void main(String [] args){
       DataStudent2 window1 = new DataStudent2();
    }
-
 }
