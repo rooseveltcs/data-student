@@ -1,37 +1,42 @@
-/**
-* DataStudent2.java
-* Assignment: This assignment is for use by teachers who collect their students data at the 
-* beginning of the year. The teachers can save the data in a txt and then can have the data 
-* easily accessible when they want it. 
-* data at the beginning of the year. 
-* Purpose: To practice how to create a simple data base to which one can pull information from.
-* @version 6/7/14
-* @author John Dale
-*/
-
-/*
-* This class is accessed when the student info button is pressed.
-* It creates a JFrame that displays so a user can enter their data.
-* Once a user has entered their data it then saves the data as a single line in a txt
-* The user can either click next or Done. Done will send the client back to the beginning 
-* of the program while next will clear the text field and allow for another entry
-*/
-
 import java.awt.*;
 import javax.swing.*;
 import java.util.*;
 import java.io.*;
 import java.awt.event.*;
 
+/**
+* DataStudent2.java
+* This class is accessed when the student info button is pressed.
+* It creates a JFrame that displays so a user can enter their data.
+* Once a user has entered their data it then saves the data as a single line in a txt
+* The user can either click next or Done. Done will send the client back to the beginning 
+* of the program while next will clear the text field and allow for another entry
+* @param modNameofTxt is the name of the text file
+* @param Name is the variable name of the JTextedField where name is entered into by user
+* @param NameCalledBy is the variable name of the JTextedField where NameCalledBy is entered into by user
+* @param GradeNumber is the variable name of the JTextedField where GradeNumber is entered into by user
+* @param Birthday is the variable name of the JTextedField where Birthday is entered into by user
+* @param Email is the variable name of the JTextedField where Email is entered into by user
+* @param CellNumber is the variable name of the JTextedField where CellNumber is entered into by user
+* @param ParentEmail is the variable name of the JTextedField where ParentEmail is entered into by user
+* @param ParentNumber is the variable name of the JTextedField where ParentNumber is entered into by user
+* @param GeneralComments is the variable name of the JTextedArea where GeneralComments is entered into by user
+* @param printOut is the name PrintStream variable that is created to use between methods easily
+* @param nextStudentButton is the name of the JButton for next button
+* @param doneButton is the name of the JButton for done button
+* @version 6/7/14
+* @author John Dale
+*/
+
 public class StudentInfoButton extends JFrame implements ActionListener{
    //Is the name of the txt file I will be manipulating
    private String modNameofTxt;
    //Are the names of the points of notice 
-   private JTextField Name ;
+   private JTextField Name;
    private JTextField NameCalledBy;
    private JComboBox GradeNumber; 
    private JTextField Birthday;
-   private JTextField Email ;
+   private JTextField Email;
    private JTextField CellNumber;
    private JTextField ParentEmail;  
    private JTextField ParentNumber ;
@@ -43,12 +48,13 @@ public class StudentInfoButton extends JFrame implements ActionListener{
    JButton nextStudentButton = new JButton("Next Student");
    JButton doneButton = new JButton("Done");   
    
-   /*
+   /**
    * This constructor is long and tedious, it is so because it needs 
    * to add individual components for each part. I could maybe run a 
    * for loop with arrays but the data and the names are not always sutible for this. 
    * Besides constructing Jlabels, JButtons and JTextFields, this class adds 
    * actionlisteners to buttons done and next
+   * 
    */
    public StudentInfoButton(String modNameofTxt){
       
@@ -112,7 +118,6 @@ public class StudentInfoButton extends JFrame implements ActionListener{
       //for when differeniating between which button clicked
       doneButton.setActionCommand("Done");
       nextStudentButton.setActionCommand("Next Student"); 
-      
       //creates the file and the Printstream so I can print to a file
       //checks to make sure no error and if so designates so by printing to console error.
       try{  
@@ -126,13 +131,13 @@ public class StudentInfoButton extends JFrame implements ActionListener{
       
       //adds an action listener to both buttons
       nextStudentButton.addActionListener(this); 
-      doneButton.addActionListener(this);
-         
-               	   
+      doneButton.addActionListener(this);           	   
    }
-   /*
+   
+   /**
    * This method checks what button was pressed and then runs an if 
    * statement depending on the button
+   * @param src equals the source of the button clicked.
    */
    public void actionPerformed (ActionEvent evt){
       //gets the source of the button pressed
@@ -145,10 +150,11 @@ public class StudentInfoButton extends JFrame implements ActionListener{
       }
    } 
    
-   /*
+   /**
    * Saves the information entered by client as variables saves variables 
    * to array and then prints array to txt
    * then resets txt boxes to orginal format for new enter.
+   * @param dataSet is array that holds the string values from the text fields
    */   
    public void nextButtonScreen(){
    
@@ -183,11 +189,14 @@ public class StudentInfoButton extends JFrame implements ActionListener{
       System.out.println("Next");
    
    }
-   /*
+   
+   /**
    * Saves the information entered by client as variables saves variables 
    * to array and then prints array to txt as a single line, different parts are 
    * differniated in line by comma or other symbol
    * then checks by yes/no to see if client is done and then exits the program
+   * @param dataSet is array that holds the string values from the text fields
+   * @param choice is the value of the JOption Screen is the user clicks yes, no or cancel. 
    */
    public void doneButtonScreen(){
    
@@ -219,12 +228,13 @@ public class StudentInfoButton extends JFrame implements ActionListener{
          System.out.print("Done");
          frame.setVisible(false);
          DataStudent2 window1 = new DataStudent2();
-         
       }
    }
 }
 
-//tests the StudentInfoButtonClass
+/**
+* Tests the StudentInfoButtonClass
+*/
 class StudentInfoTester{
    public static void main(String [] args){
       StudentInfoButton window1 = new StudentInfoButton("Txt.txt");

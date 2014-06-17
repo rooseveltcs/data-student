@@ -1,25 +1,18 @@
-/**
-* DataStudent2.java
-* Assignment: This assignment is for use by teachers who collect their students data at the 
-* beginning of the year. The teachers can save the data in a txt and then can have the data 
-* easily accessible when they want it. 
-* data at the beginning of the year. 
-* Purpose: To practice how to create a simple data base to which one can pull information from.
-* @version 6/7/14
-* @author John Dale
-*/
-
-/*    
-*Writes the first three buttons of the program and directs the student to the various classes
-*/
-
 import java.awt.*;
 import javax.swing.*;
 import java.util.*;
 import java.awt.event.*;
 import java.io.*;
 
-
+/**
+* DataStudent2.java
+* Writes the first three buttons of the program and directs the student to the various classes
+* @param enterButton goes to StudentInfo button class.
+* @param retrieveButton goes to retrieve button class.
+* @param finalButton closes the program.
+* @version 6/7/14
+* @author John Dale
+*/
 
 public class DataStudent2 extends JFrame implements ActionListener{
    //creates the button and initializes the buttons
@@ -27,9 +20,9 @@ public class DataStudent2 extends JFrame implements ActionListener{
    JButton retrieveButton = new JButton("Retrieve Student Information");
    JButton finalButton = new JButton("Finished with Data Analysis");
    
-/*
-* constucts the field variables further by adding action listener and adds them to Jframe
-*/
+   /**
+   * constucts the field variables further by adding action listener and adds them to Jframe
+   */
    public DataStudent2(){
       JFrame frame = new JFrame();
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,10 +39,14 @@ public class DataStudent2 extends JFrame implements ActionListener{
    
       frame.setVisible(true);
    }
-/*
-*checks the source of which button was clicked and saves as src variable
-*Then it runs through if statements for various buttons.
-*/
+   /*
+   * Checks the source of which button was clicked and saves as src variable
+   * Then it runs through if statements for various buttons.
+   * @param src equals the source of the button clicked.
+   * @param modNameofTxt equals the name of the txt the user enters modified
+   * @param modNameofTxt is the name of the JOptionPane that the user enters name of txt into.
+   * @exception d catches io Exceptions that may be created by creating the file
+   */
    public void actionPerformed(ActionEvent evt) {
       Object src = evt.getSource();
       if(src == enterButton){
@@ -84,7 +81,9 @@ public class DataStudent2 extends JFrame implements ActionListener{
    }
    
 }
-//tests the DataStudent2 class
+/**
+* runs the DataStudent2 class
+*/
 class DataStudent{
    public static void main(String [] args){
       DataStudent2 window1 = new DataStudent2();

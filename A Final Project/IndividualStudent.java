@@ -1,20 +1,18 @@
-/*
-* Is accessed when the Retrieve Button is clicked. Depending on if the client clicks the button
-* individualButton or massButton the code checks the user's click descion and then in ActionListener  
-* an if statement takes the user to IndividualStudent info class or pulls up the mass printout 
-* or just the raw data
-*/
-
-/*
-* The purpose of this class was to create a button screen that the user can easily click on and then 
-* access the data. This class then displays the data in a Drawingpanel.
-*/
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 import java.io.*;
+
+/**
+* DataStudent2.java
+* Is accessed when the Retrieve Button is clicked. Depending on if the client clicks the button
+* individualButton or massButton the code checks the user's click descion and then in ActionListener  
+* an if statement takes the user to IndividualStudent info class or pulls up the mass printout 
+* or just the raw data
+* @version 6/7/14
+* @author John Dale
+*/
 
 public class IndividualStudent extends JFrame implements ActionListener{
    //This initializes the array list that I will add the buttons 
@@ -25,7 +23,7 @@ public class IndividualStudent extends JFrame implements ActionListener{
    //This is the name of the txt files I will be manipulating
    private String modNameofTxt;
    
-   /*
+   /**
    *This initializes the nameLabel Array as well as the txt name
    * and calls the initGUI method.
    */
@@ -37,7 +35,7 @@ public class IndividualStudent extends JFrame implements ActionListener{
     
       
    }
-   /*
+   /**
    * initGUI stands for initializing the GUI for the names of in the array list 
    * picked out from the previous class. It takes in nameLabels therefore as a parameter 
    * and creates individaul buttons for each name in the nameLables. While adding the button
@@ -68,14 +66,14 @@ public class IndividualStudent extends JFrame implements ActionListener{
       frame.setVisible(true);
    }       
    
-   /*
+   /**
    * When a button is clicked, its the source from which button was clicked is checked.
    * This command is stored in actionCommand where it checks the which button was pressed 
    * thus knows the name of the button. The method then enters a while loop that checks 
    * and if a file has a next line by using a scanner. It then checks the first (0) split place 
    * of the line and compares to the name of the button clicked. If true then it passes the 
    * line on the txt file as a parameter to the method displayInfo.
-   * Method has try and catch exception becayse actionPerformed is an inherited method and is
+   * Method has try and catch exception because actionPerformed is an inherited method and is
    * persnickity about FileNotFoundException.   
    */
    public void actionPerformed(ActionEvent e) {
@@ -104,7 +102,7 @@ public class IndividualStudent extends JFrame implements ActionListener{
       }
    }
    
-   /*
+   /**
    *This method is called in ActionPerformed it is the actual display 
    *panel of student information when the button for a student is clicked.
    */
@@ -129,9 +127,9 @@ public class IndividualStudent extends JFrame implements ActionListener{
    
 }
 
-/*
+/**
 * Tests the txt test123.txt and the names in it by creating a fake but accurate array 
-* to the file
+* to the file this file has been deleted and is not present you would have to add the file
 */
 class IndividualStudentTester {
    public static void main(String[] args){
