@@ -103,8 +103,8 @@ public class IndividualStudent extends JFrame implements ActionListener{
    }
    
    /**
-   *This method is called in ActionPerformed it is the actual display 
-   *panel of student information when the button for a student is clicked.
+   * This method is called in ActionPerformed it is the actual display 
+   * panel of student information when the button for a student is clicked.
    */
    public static void displayInfo(String line){
    

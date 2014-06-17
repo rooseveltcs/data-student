@@ -10,9 +10,9 @@ import java.io.*;
 * individualButton or massButton the code checks the user's click descion and then in ActionListener  
 * an if statement takes the user to IndividualStudent info class or pulls up the mass printout 
 * or just the raw data
-* @param modNameofTxt equals the name of the txt the user enters modified
-* @param individualButton is the name of the JButton for Indivudal Data Print out
-* @param massButton is the name of the JButton for Full Data Set PrintOut
+* modNameofTxt equals the name of the txt the user enters modified
+* individualButton is the name of the JButton for Indivudal Data Print out
+* massButton is the name of the JButton for Full Data Set PrintOut
 * @version 6/7/14
 * @author John Dale
 */
@@ -52,7 +52,8 @@ public class RetrieveButton extends JFrame implements ActionListener {
    * statement to call true and thus call the code
    * If user clicks individual Button then they are taken to Individual student class 
    * If user clicks mass print out then it prints the data in raw data form.
-   * @param src equals the source of the button clicked.
+   * @param evt equals the event when a button is clicked
+   * src equals the source of the button clicked.
    * @exception e catches io Exceptions if file is not present 
    */
    public void actionPerformed(ActionEvent evt) {

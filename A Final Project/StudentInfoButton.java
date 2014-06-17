@@ -11,19 +11,19 @@ import java.awt.event.*;
 * Once a user has entered their data it then saves the data as a single line in a txt
 * The user can either click next or Done. Done will send the client back to the beginning 
 * of the program while next will clear the text field and allow for another entry
-* @param modNameofTxt is the name of the text file
-* @param Name is the variable name of the JTextedField where name is entered into by user
-* @param NameCalledBy is the variable name of the JTextedField where NameCalledBy is entered into by user
-* @param GradeNumber is the variable name of the JTextedField where GradeNumber is entered into by user
-* @param Birthday is the variable name of the JTextedField where Birthday is entered into by user
-* @param Email is the variable name of the JTextedField where Email is entered into by user
-* @param CellNumber is the variable name of the JTextedField where CellNumber is entered into by user
-* @param ParentEmail is the variable name of the JTextedField where ParentEmail is entered into by user
-* @param ParentNumber is the variable name of the JTextedField where ParentNumber is entered into by user
-* @param GeneralComments is the variable name of the JTextedArea where GeneralComments is entered into by user
-* @param printOut is the name PrintStream variable that is created to use between methods easily
-* @param nextStudentButton is the name of the JButton for next button
-* @param doneButton is the name of the JButton for done button
+* modNameofTxt is the name of the text file
+* Name is the variable name of the JTextedField where name is entered into by user
+* NameCalledBy is the variable name of the JTextedField where NameCalledBy is entered into by user
+* GradeNumber is the variable name of the JTextedField where GradeNumber is entered into by user
+* Birthday is the variable name of the JTextedField where Birthday is entered into by user
+* Email is the variable name of the JTextedField where Email is entered into by user
+* CellNumber is the variable name of the JTextedField where CellNumber is entered into by user
+* ParentEmail is the variable name of the JTextedField where ParentEmail is entered into by user
+* ParentNumber is the variable name of the JTextedField where ParentNumber is entered into by user
+* GeneralComments is the variable name of the JTextedArea where GeneralComments is entered into by user
+* printOut is the name PrintStream variable that is created to use between methods easily
+* nextStudentButton is the name of the JButton for next button
+* doneButton is the name of the JButton for done button
 * @version 6/7/14
 * @author John Dale
 */
@@ -54,7 +54,6 @@ public class StudentInfoButton extends JFrame implements ActionListener{
    * for loop with arrays but the data and the names are not always sutible for this. 
    * Besides constructing Jlabels, JButtons and JTextFields, this class adds 
    * actionlisteners to buttons done and next
-   * 
    */
    public StudentInfoButton(String modNameofTxt){
       
@@ -137,7 +136,8 @@ public class StudentInfoButton extends JFrame implements ActionListener{
    /**
    * This method checks what button was pressed and then runs an if 
    * statement depending on the button
-   * @param src equals the source of the button clicked.
+   * src equals the source of the button clicked.
+   * @param evt is the vent that takes place from a button that is clicked
    */
    public void actionPerformed (ActionEvent evt){
       //gets the source of the button pressed
@@ -154,7 +154,7 @@ public class StudentInfoButton extends JFrame implements ActionListener{
    * Saves the information entered by client as variables saves variables 
    * to array and then prints array to txt
    * then resets txt boxes to orginal format for new enter.
-   * @param dataSet is array that holds the string values from the text fields
+   * dataSet is array that holds the string values from the text fields
    */   
    public void nextButtonScreen(){
    
@@ -195,8 +195,8 @@ public class StudentInfoButton extends JFrame implements ActionListener{
    * to array and then prints array to txt as a single line, different parts are 
    * differniated in line by comma or other symbol
    * then checks by yes/no to see if client is done and then exits the program
-   * @param dataSet is array that holds the string values from the text fields
-   * @param choice is the value of the JOption Screen is the user clicks yes, no or cancel. 
+   * dataSet is array that holds the string values from the text fields
+   * choice is the value of the JOption Screen is the user clicks yes, no or cancel. 
    */
    public void doneButtonScreen(){
    

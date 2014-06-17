@@ -7,9 +7,6 @@ import java.io.*;
 /**
 * DataStudent2.java
 * Writes the first three buttons of the program and directs the student to the various classes
-* @param enterButton goes to StudentInfo button class.
-* @param retrieveButton goes to retrieve button class.
-* @param finalButton closes the program.
 * @version 6/7/14
 * @author John Dale
 */
@@ -42,9 +39,8 @@ public class DataStudent2 extends JFrame implements ActionListener{
    /*
    * Checks the source of which button was clicked and saves as src variable
    * Then it runs through if statements for various buttons.
-   * @param src equals the source of the button clicked.
-   * @param modNameofTxt equals the name of the txt the user enters modified
-   * @param modNameofTxt is the name of the JOptionPane that the user enters name of txt into.
+   * src equals the source of the button clicked.
+   * modNameofTxt is the name of the JOptionPane that the user enters name of txt into.
    * @exception d catches io Exceptions that may be created by creating the file
    */
    public void actionPerformed(ActionEvent evt) {
